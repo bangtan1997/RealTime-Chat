@@ -1,0 +1,8 @@
+# Mengirim permintaan POST ke endpoint /authenticate
+POST http://localhost:3001/authenticate
+Content-Type: application/json
+
+# Body permintaan
+{
+    "username": "zeck"
+}

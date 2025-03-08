@@ -1,0 +1,144 @@
+/* Variabel CSS untuk warna dan font */
+:root {
+  --background-color: rgb(20, 23, 33);
+  --background-gradient: linear-gradient(75deg, var(--background-color) 0%, var(--background-color) 50%, rgba(20, 23, 33, 0.8) 100%);
+  --primary-color: #fa541c;
+  --text-color-light: #e8e8e8;
+  --text-color-muted: #afafaf;
+  --input-background: #3e404b;
+  --font-family: 'Avenir', sans-serif;
+}
+
+body {
+  background-image: url('../assets/valley.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card {
+  width: 90%;
+  max-width: 350px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+  color: var(--text-color-muted);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem; /* Menambahkan jarak antara kolom */
+}
+
+.auth-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-color-muted);
+}
+
+.auth-input {
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  background-color: var(--input-background);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 1rem; /* Menambahkan jarak antara input */
+  box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+}
+
+.auth-button {
+  width: 100%;
+  height: 3.5rem;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem; /* Menambahkan jarak antara button dan input */
+  box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+}
+
+.auth-button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+.auth-button:active {
+  animation: rgbEffect 0.5s;
+}
+
+@keyframes rgbEffect {
+  0% { background-color: red; }
+  33% { background-color: green; }
+  66% { background-color: blue; }
+  100% { background-color: var(--primary-color); }
+}
+
+.auth-error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.auth-error.hidden {
+  opacity: 0;
+}
+
+.notification {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.5s ease-out;
+}
+
+.notification.hidden {
+  opacity: 0;
+}
