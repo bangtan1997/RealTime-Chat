@@ -25,7 +25,7 @@ VibeChat is a web application that enables users to communicate in real-time thr
 
 1. Clone this repository:
     ```sh
-    git clone https://github.com/Halfirzzha/VibeChat.git
+    git clone https://github.com/bangtan1997/VibeChat.git
     cd VibeChat/backend
     ```
 
@@ -104,8 +104,3 @@ vibechat/
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-## Contact
-
-For further inquiries, please contact us through the buttons below:
-
-[![Instagram](https://img.shields.io/badge/Instagram-Follow-blue?logo=instagram)](https://www.instagram.com/halfirzzha)
